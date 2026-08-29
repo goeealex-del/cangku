@@ -4,9 +4,9 @@
     {
       "type": "vless",
       "tag": "vless-in",
-      "listen": "::",
+      "listen": "0.0.0.0",
       "listen_port": 8080,
-      "users": [{ "uuid": "PASTE_YOUR_UUID_HERE" }],
+      "users": [{ "uuid": "8679f40a-589f-4c80-a83f-fb99ad6844ee" }],
       "transport": { "type": "ws", "path": "/vless" }
     }
   ],
