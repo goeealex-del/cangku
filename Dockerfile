@@ -19,7 +19,9 @@ RUN wget https://github.com/SagerNet/sing-box/releases/download/v${SING_BOX_VERS
     rm -rf sing-box-${SING_BOX_VERSION}-linux-amd64*
 
 # 2. 下载并安装 cloudflared (对应你的 sys-service)
-RUN wget -O /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/${CLOUDFLARED_VERSION}/download/cloudflared-linux-amd64
+RUN wget -O /usr/local/bin/cloudflared \
+  https://github.com/cloudflare/cloudflared/releases/download/2026.8.2/cloudflared-linux-amd64 \
+  && chmod +x /usr/local/bin/cloudflared
 
 # 3. 复制你仓库里现有的配置文件 (config.json, start.sh 等)
 COPY . .
